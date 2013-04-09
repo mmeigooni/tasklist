@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="container">
+		<% flash.each do |msg, value| %>
+			<p class="<%= msg %> flash"><%= value %><span id='close-flash' style="float: right; border: 1px solid #444; border-radius: 30px; padding: 0px 3px; color: #444;">X</span></p>
+		<% end %>
+		<script>
+			$('#close-flash').on('click', function() {
+				$('.flash').hide();
+			});
+			$(".flash").delay(3000).fadeOut();
+		</script>
+		<% if current_user %>
+			<p style="text-align: right; font-size: .7em">
+				Singed in as<br>
+				<%= current_user.email %><br>
+				<%= link_to "Sign out", logout_url %>
+			</p>
+		<% end %>
+		<%= yield %>
+	</div>
+
+</body>
+</html>

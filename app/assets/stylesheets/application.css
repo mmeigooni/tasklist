@@ -1,0 +1,56 @@
+html {
+  background: url(losangeles.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+* {
+	font-family: 'Ubuntu', sans-serif;
+}
+ .container {
+ 	background-color: white;
+ 	width: 700px;
+ 	margin: auto;
+ 	border: 1px solid black;
+ 	border-radius: 5px;
+ 	padding: 10px;
+ }
+ #task-list {
+ 	margin: auto;
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ }
+ #task-list li {
+ 	list-style-type: none;
+ 	border-bottom: 1px dashed #999;
+ 	padding: 3px 0px;
+ }
+ h1 {
+ 	text-align: center;
+ }
+ #task-list a {
+ 	float: right;
+ 	padding-left: 10px;
+ }
+ #description-field {
+ 	line-height: 1em;
+ 	font-size: 1em;
+ }
+ .notice {
+ 	background-color: #66ED5F;
+ 	border: 1px solid black;
+ 	border-radius: 5px;
+ 	padding: 8px;
+ }
+ .alert {
+ 	background-color: #ED5F66;
+ 	border: 1px solid black;
+ 	border-radius: 5px;
+ 	padding: 8px;
+ }
+ .center {
+ 	text-align: center;
+ 	width: 100%;
+ 	margin: auto;
+ }

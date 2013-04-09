@@ -1,0 +1,14 @@
+<h1>Tasklist</h1>
+
+
+<ul id="task-list">
+  <% @tasks.each do |task| %>
+    <%= render 'task_partial', task: task %>
+  <% end %>
+</ul>
+
+
+<br />
+<div id="form-spot" style="text-align: center;">
+  <%= link_to 'New Task', new_task_path, remote: true, id: 'new-task-link' %>
+</div>
